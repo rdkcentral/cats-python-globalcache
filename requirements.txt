@@ -1,0 +1,11 @@
+beautifulsoup4==4.12.3
+fastapi==0.112.1
+lxml==5.3.0
+python-multipart==0.0.9
+PyYAML==6.0.2
+starlette==0.38.2
+starlette-context==0.3.6
+uvicorn==0.30.6
+pydantic-settings==2.4.0
+pylint==3.3.1
+pylintfileheader==1.0.0

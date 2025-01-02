@@ -1,0 +1,7 @@
+node_modules/
+.ipynb_checkpoints/
+*.egg-info
+.idea
+*.iml
+venv
+__pycache__/

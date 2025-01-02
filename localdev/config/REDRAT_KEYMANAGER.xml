@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AVDeviceDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AVDevices>
+    <AVDevice>
+      <Name>MY_REMOTE</Name>
+      <Manufacturer />
+      <DeviceModelNumber />
+      <RemoteModelNumber />
+      <DeviceType>TV</DeviceType>
+      <DecoderClass>default</DecoderClass>
+      <RCCorrection>
+        <useDefault>true</useDefault>
+        <rcCorrVal>0</rcCorrVal>
+      </RCCorrection>
+      <CreateDelta>
+        <useDefault>true</useDefault>
+        <deltaValue>0</deltaValue>
+      </CreateDelta>
+      <DecodeDelta>
+        <useDefault>true</useDefault>
+        <deltaValue>0</deltaValue>
+      </DecodeDelta>
+      <DoubleSignals>false</DoubleSignals>
+      <KeyboardSignals>false</KeyboardSignals>
+      <XMP1Signals>false</XMP1Signals>
+      <Signals>
+        <IRPacket xsi:type="ModulatedSignal">
+          <Name>0</Name>
+          <UID>s/f3RXjyckChBlJpnTLyNQ==</UID>
+          <PauseRepeatMode>ConstantGap</PauseRepeatMode>
+          <RepeatPause>0</RepeatPause>
+          <ModulationFreq>37647</ModulationFreq>
+          <Lengths>
+            <double>8.9025</double>
+            <double>4.5405000000000006</double>
+            <double>0.533</double>
+            <double>1.716</double>
+            <double>2.265</double>
+          </Lengths>
+          <SigData>AAECAgICAgICAgICAgICAgICAgMCAwIDAgMCAwIDAgMCAwIDAgMCAgICAgICAgICAgICAgICAgMCAwIDAgMCAwIDAn8ABAJ/</SigData>
+          <NoRepeats>1</NoRepeats>
+          <IntraSigPause>39.9085</IntraSigPause>
+          <ToggleData />
+        </IRPacket>
+        <IRPacket xsi:type="ModulatedSignal">
+          <Name>1</Name>
+          <UID>rveDwjRqX0OFwhqqnS+ETQ==</UID>
+          <PauseRepeatMode>ConstantGap</PauseRepeatMode>
+          <RepeatPause>0</RepeatPause>
+          <ModulationFreq>37647</ModulationFreq>
+          <Lengths>
+            <double>8.907</double>
+            <double>4.5424999999999995</double>
+            <double>0.532</double>
+            <double>1.718</double>
+            <double>2.2655000000000003</double>
+          </Lengths>
+          <SigData>AAECAgICAgICAgICAgICAgICAgMCAwIDAgMCAwIDAgMCAwICAgMCAwIDAgICAgICAgICAwICAgICAgIDAgMCAwIDAn8ABAJ/</SigData>
+          <NoRepeats>1</NoRepeats>
+          <IntraSigPause>39.912499999999994</IntraSigPause>
+          <ToggleData />
+        </IRPacket>
+        <IRPacket xsi:type="ModulatedSignal">
+          <Name>2</Name>
+          <UID>9vx6D4BzwEm5gEQTvR55Qg==</UID>
+          <PauseRepeatMode>ConstantGap</PauseRepeatMode>
+          <RepeatPause>0</RepeatPause>
+          <ModulationFreq>37647</ModulationFreq>
+          <Lengths>
+            <double>8.904</double>
+            <double>4.5445</double>
+            <double>0.53399999999999992</double>
+            <double>1.718</double>
+            <double>2.2655000000000003</double>
+          </Lengths>
+          <SigData>AAECAgICAgICAgICAgICAgICAgMCAwIDAgMCAwIDAgMCAwICAgMCAwICAgICAgICAgICAwICAgICAwIDAgMCAwIDAn8ABAJ/</SigData>
+          <NoRepeats>1</NoRepeats>
+          <IntraSigPause>39.917</IntraSigPause>
+          <ToggleData />
+        </IRPacket>
+        <IRPacket xsi:type="ModulatedSignal">
+          <Name>3</Name>
+          <UID>tG8nE49TIUOflcQLRS6DpA==</UID>
+          <PauseRepeatMode>ConstantGap</PauseRepeatMode>
+          <RepeatPause>0</RepeatPause>
+          <ModulationFreq>37383</ModulationFreq>
+          <Lengths>
+            <double>8.901</double>
+            <double>4.5424999999999995</double>
+            <double>0.532</double>
+            <double>1.719</double>
+            <double>2.2655000000000003</double>
+          </Lengths>
+          <SigData>AAECAgICAgICAgICAgICAgICAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgICAgICAgICAgICAgICAgIDAgMCAwIDAn8ABAJ/</SigData>
+          <NoRepeats>1</NoRepeats>
+          <IntraSigPause>39.913</IntraSigPause>
+          <ToggleData />
+        </IRPacket>
+      </Signals>
+    </AVDevice>
+  </AVDevices>
+</AVDeviceDB>
