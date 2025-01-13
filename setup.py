@@ -20,7 +20,7 @@ import setuptools
 
 setuptools.setup(
     name='python-globalcache',
-    version='25.1.1',
+    version='1.0.0',
     packages=setuptools.find_packages('python_globalcache'),
     package_data={'python_globalcache.data': ['*']},
     package_dir={'': 'python_globalcache'},
