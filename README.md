@@ -53,11 +53,9 @@ For docker container deployment, please refer to settings in `python-globalcache
 The `/irms` directory contains the following files for gcdispatcher:
 * `/irms/config/gc/gc-dispatcher-config.yml`
   * Thie file is created by IR-MS and defines device configuration (primarily hostname and port of global-cache devices)
-  * [ ] TODO: gcdispatcher should query IR-MS at startup to make sure it's loaded before reading this file.
 * `/irms/redrat/REDRAT_KEYMANAGER.xml`
   * This is the RedRat key dataset file, and must be copied separately to this location (e.g. via Ansible job)
   * This is currently copied from the IR-MS ansible job.
-  * [ ] TODO: Should this be copied from the gcdispatcher ansible job?
 
 Both files are loaded at service start. Restart the docker container to reload.
 
@@ -67,18 +65,7 @@ Define the global-cache (itach devices) in the irDevices section of `/irms/ir-ms
 ```yml
 irDevices:
   - type: itach
-    host: 192.168.100.35
-    port: 4998
-    maxPorts: 3
-```
-
-For sequential hosts, you can use the count attribute. For example, if 12 iTachs are present from
-192.168.100.31 to 192.168.100.42:
-```yml
-irDevices:
-  - type: itach
-    count: 12
-    host: 192.168.100.31
+    host: 192.168.100.0
     port: 4998
     maxPorts: 3
 ```
@@ -126,7 +113,7 @@ Also be sure to update `/irms/ms/mappings.json`, e.g. if 6 A-side and 6 B-side d
 **IMPORTANT**: Upon startup, IR-MS will write the file `/irms/config/gc/gc-dispatcher-config.yml`. Please ensure
 that this directory is present for IR-MS. Only after writing this file should gcdispatcher be run.
 
-### nginx config
+### NGINX Config
 
 This is not normally necessary, but if remote access is needed - i.e., for debug and accessing swagger UI, nginx can be proxied like this:
 ```
@@ -136,16 +123,6 @@ location ~ ^\/gcdispatcher\/(.*) {
    proxy_pass http://127.0.0.1:9710/$1$is_args$args;
 }
 ```
-
-Then the Swagger UI will be available at http://RACK_IP/gcdispatcher/
-
-### Interfacing with APIs via curl
-Try, e.g.:
-```
-curl http://localhost:9710/api/v1/health
-```
-
-See [API Docs](docs/generated/api.md) for more commands
 
 ---
 
@@ -166,7 +143,7 @@ to start the server. Go to http://localhost:9710/ for swagger API.
 This must be run in either project root, or from the src/python_globalcache directory
 (where server.py exists). It will use configuration files from the localdev/config folder.
 
-You can debug in pycharm, set breakpoints, etc simply by right clicking src/python_globaclcache/server.py
+You can debug in pycharm, set breakpoints, etc simply by right-clicking src/python_globaclcache/server.py
 and clicking `debug server`
 
 ---
